@@ -12,12 +12,14 @@ VERSION="20.04.5 LTS (Focal Fossa)"
 
 # Pacakages
 ## Cloud Providers
-|Cloud|Version|
+| Cloud       | Version  |
+| ----------- | -------- |
 |aws-cli|2.8.5|
 |azure-cli|2.41.0|
 
 ## APT
-|Package|Version|
+| Package     | Version  |
+| ----------- | -------- |
 |ca-certificates|20211016~20.04.1|
 |curl|7.68.0-1|
 |dnsutils|1:9.16.1-0|
@@ -33,6 +35,7 @@ VERSION="20.04.5 LTS (Focal Fossa)"
 
 
 ## PIP
-|Package|Version|
+| Package     | Version  |
+| ----------- | -------- |
 |csvkit|1.0.7|
 |yq|3.1.0|
