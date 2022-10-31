@@ -1,5 +1,5 @@
 # docker-ubuntu-base
-Basic Ubuntu Docker image
+Basic Ubuntu Docker image (donbower/ubuntu-base)
 
 [![Repo](https://img.shields.io/static/v1?style=for-the-badge&logo=docker&logoColor=white&label=tag&message=0.1.0&color=blue)](https://github.com/DonBower/docker-ubuntu-base)
 [![Ubuntu](https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&logoColor=white&label=ubuntu&message=20.04_LTS&color=blue)](https://ubuntu.com/download/server)
