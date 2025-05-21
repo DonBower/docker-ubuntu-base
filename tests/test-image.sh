@@ -70,20 +70,21 @@ thisTagMajor=$(echo "${thisTag}" | cut -d "." -f 1)
 echo -e "Image Tags:"
 cat docker-repo/additional_tags
 
-echo -e "uname kernel name"
+echo -e ""
+printf "%-50.50s: " "uname kernel name${DOTDOTDOT}"
 uname -s
 
-echo -e "uname kernel version"
+printf "%-50.50s: " "uname kernel version${DOTDOTDOT}"
 uname -r
 
-echo -e "uname machine hardware name"
+printf "%-50.50s: " "uname machine hardware name${DOTDOTDOT}"
 uname -m
 
-echo -e "uname operating system"
+printf "%-50.50s: " "uname operating system${DOTDOTDOT}"
 uname -o
 
-echo -e "uname processor type"
+printf "%-50.50s: " "uname processor type${DOTDOTDOT}"
 uname -p
 
-echo -e "os version"
+printf "%-50.50s: " "os version${DOTDOTDOT}"
 cat /etc/*ease | grep DISTRIB_DESCRIPTION | cut -d "=" -f 2
