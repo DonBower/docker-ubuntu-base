@@ -86,4 +86,4 @@ echo -e "uname processor type"
 uname -p
 
 echo -e "os version"
-lsb_release -d
+cat /etc/*ease | grep DISTRIB_DESCRIPTION | cut -d "=" -f 2
