@@ -31,7 +31,7 @@ RUN apt update --assume-yes \
           ca-certificates \
           curl \
           net-tools \
-          netcat \
+          netcat-openbsd \
           unzip \
           wget \
     && apt clean \
