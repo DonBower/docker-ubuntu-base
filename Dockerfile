@@ -25,7 +25,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 #                                    LAYER 2                                   #
 ################################################################################
 # Update Ubuntu Software repository
-COPY files/aptPackages.txt aptPackages.txt
 RUN apt update --assume-yes \
     && rm -rf /var/lib/apt/lists/* \
     && apt upgrade \
