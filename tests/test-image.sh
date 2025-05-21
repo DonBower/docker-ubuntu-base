@@ -84,3 +84,6 @@ uname -o
 
 echo -e "uname processor type"
 uname -p
+
+echo -e "os version"
+lsb_release -d
