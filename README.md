@@ -14,7 +14,7 @@ VERSION="20.04.5 LTS (Focal Fossa)"
 ## Cloud Providers
 | Cloud       | Version  |
 | ----------- | -------- |
-|aws-cli|2.8.5|
+|aws-cli|2.8.7|
 |azure-cli|2.41.0|
 
 ## APT
