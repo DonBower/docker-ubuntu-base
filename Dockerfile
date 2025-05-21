@@ -30,6 +30,9 @@ RUN apt update --assume-yes \
     && apt install --assume-yes --install-recommends \
           ca-certificates \
           curl \
+          net-tools \
+          netcat \
+          unzip \
           wget \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
