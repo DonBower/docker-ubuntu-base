@@ -26,6 +26,10 @@ ARG DEBIAN_FRONTEND=noninteractive
 ################################################################################
 # Update Ubuntu Software repository
 RUN apt update --assume-yes \
-    && rm -rf /var/lib/apt/lists/* \
     && apt upgrade --assume-yes \
-    && apt clean
+    && apt install --assume-yes --install-recommends \
+          ca-certificates \
+          curl \
+          wget \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
