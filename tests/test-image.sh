@@ -87,6 +87,6 @@ printf "%-50.50s: " "uname processor type${DOTDOTDOT}"
 uname -p
 
 printf "%-50.50s: " "os version${DOTDOTDOT}"
-cat /etc/*ease | grep DISTRIB_DESCRIPTION | cut -d "=" -f 2
+cat /etc/*ease | grep 'VERSION=' | cut -d "=" -f 2
 echo -e ""
-cat /etc/*ease
+# cat /etc/*ease
