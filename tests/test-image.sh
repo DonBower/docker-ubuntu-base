@@ -69,3 +69,18 @@ thisTagMajor=$(echo "${thisTag}" | cut -d "." -f 1)
 
 echo -e "Image Tags:"
 cat docker-repo/additional_tags
+
+echo -e "uname kernel name"
+uname -s
+
+echo -e "uname kernel version"
+uname -r
+
+echo -e "uname machine hardware name"
+uname -m
+
+echo -e "uname operating system"
+uname -o
+
+echo -e "uname processor type"
+uname -p
