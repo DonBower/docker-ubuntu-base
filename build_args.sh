@@ -12,16 +12,16 @@ if [[ ${DEBUG} -ge 1 ]]; then
 fi
 
 thisTag=$(cat docker-repo/version.txt)
-thisTagMinor=$(echo "${thisTag}" | cut -d "." -f 1-2)
-thisTagMajor=$(echo "${thisTag}" | cut -d "." -f 1)
+# thisTagMinor=$(echo "${thisTag}" | cut -d "." -f 1-2)
+# thisTagMajor=$(echo "${thisTag}" | cut -d "." -f 1)
 
 if [[ "${1}" == "test" ]]; then
   echo -e "${thisTag}-rc" > docker-repo/additional_tags
 else
   {
     echo -e "${thisTag}"
-    echo -e "${thisTagMinor}"
-    echo -e "${thisTagMajor}"
+    # echo -e "${thisTagMinor}"
+    # echo -e "${thisTagMajor}"
     echo -e "latest"
   } > docker-repo/additional_tags
 fi
