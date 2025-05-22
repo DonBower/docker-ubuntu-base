@@ -24,6 +24,7 @@ EOF
 
 printf "\n\n%-50.50s: %s\n" "tool" "version"
 printf '%0.s=' $(seq 1 75)
+echo ""
 
 IFS=","
 while read -r thisTool thisMethod versionCMD; do
