@@ -22,7 +22,8 @@ EOF
 # csvlook,pip,--version
 # fly,wget,--version
 
-printf "%-50.50s: %s\n" "tool" "version"
+printf "\n\n%-50.50s: %s\n" "tool" "version"
+printf '%0.s=' $(seq 1 75)
 
 IFS=","
 while read -r thisTool thisMethod versionCMD; do
