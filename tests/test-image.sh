@@ -12,31 +12,31 @@ if [[ ${DEBUG} -ge 1 ]]; then
   printf "%-50.50s: %s\n" "ATC_EXTERNAL_URL${DOTDOTDOT}" "${ATC_EXTERNAL_URL}"
 fi
 
-# cat > tools.csv <<EOF
-# jq,apt-get,--version
-# wget,apt-get,--version | head -n 1 | awk '{print \$3}'
-# curl,apt-get,--version | head -n 1 | awk '{print \$2}'
+cat > tools.csv <<EOF
+jq,apt-get,--version
+wget,apt-get,--version | head -n 1 | awk '{print \$3}'
+curl,apt-get,--version | head -n 1 | awk '{print \$2}'
+EOF
 # python,apt-get,--version
 # yq,pip,--version
 # csvlook,pip,--version
 # fly,wget,--version
-# EOF
 
-# printf "%-50.50s: %s\n" "tool" "version"
+printf "%-50.50s: %s\n" "tool" "version"
 
-# IFS=","
-# while read -r thisTool thisMethod versionCMD; do
-#   thisToolLocation=$(which "${thisTool}")
+IFS=","
+while read -r thisTool thisMethod versionCMD; do
+  thisToolLocation=$(which "${thisTool}")
 
-#   if [[ -z "${thisToolLocation}" ]]; then
-#     echo -e "Missing tool ${thisTool}, installed via ${thisMethod}"
-#     exit 1
-#   else
-#     thisVersion=$(eval "${thisTool} ${versionCMD}")
-#     printf "%-50.50s: %s\n" "${thisTool} ${DOTDOTDOT}" "${thisVersion}"
-#   fi
+  if [[ -z "${thisToolLocation}" ]]; then
+    echo -e "Missing tool ${thisTool}, installed via ${thisMethod}"
+    exit 1
+  else
+    thisVersion=$(eval "${thisTool} ${versionCMD}")
+    printf "%-50.50s: %s\n" "${thisTool} ${DOTDOTDOT}" "${thisVersion}"
+  fi
 
-# done < tools.csv
+done < tools.csv
 
 # if [[ ${DEBUG} -ge 1 ]]; then
 #   echo -e "concourseWebVersion=\$(curl --silent --insecure \"${ATC_EXTERNAL_URL}/api/v1/info\" | jq --raw-output .version)"

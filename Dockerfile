@@ -30,9 +30,11 @@ RUN apt update --assume-yes \
     && apt install --assume-yes --install-recommends \
           ca-certificates \
           curl \
+          jq \
           net-tools \
           netcat-openbsd \
           unzip \
+          vim \
           wget \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
