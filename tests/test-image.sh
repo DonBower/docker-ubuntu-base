@@ -59,13 +59,9 @@ done < tools.csv
 
 echo -e "All Tests pass, tag image"
 thisTag=$(cat docker-repo/version.txt)
-thisTagMinor=$(echo "${thisTag}" | cut -d "." -f 1-2)
-thisTagMajor=$(echo "${thisTag}" | cut -d "." -f 1)
 
 {
   echo -e "${thisTag}"
-  echo -e "${thisTagMinor}"
-  echo -e "${thisTagMajor}"
   echo -e "latest"
 } > docker-repo/additional_tags
 
