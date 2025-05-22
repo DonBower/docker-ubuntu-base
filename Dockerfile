@@ -33,6 +33,9 @@ RUN apt update --assume-yes \
           jq \
           net-tools \
           netcat-openbsd \
+          python3 \
+          python-is-python3 \
+          python3-pip \
           unzip \
           vim \
           wget \

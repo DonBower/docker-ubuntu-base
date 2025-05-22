@@ -13,11 +13,11 @@ if [[ ${DEBUG} -ge 1 ]]; then
 fi
 
 cat > tools.csv <<EOF
-jq,apt-get,--version
-wget,apt-get,--version | head -n 1 | awk '{print \$3}'
 curl,apt-get,--version | head -n 1 | awk '{print \$2}'
+jq,apt-get,--version
+python,apt-get,--version
+wget,apt-get,--version | head -n 1 | awk '{print \$3}'
 EOF
-# python,apt-get,--version
 # yq,pip,--version
 # csvlook,pip,--version
 # fly,wget,--version
